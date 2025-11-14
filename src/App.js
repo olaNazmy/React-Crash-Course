@@ -44,17 +44,12 @@ function App() {
   return (
     <div className="App">
       <ProductList>
-        <ProductCard
-          background="darkolivegreen"
-          product={products[0]}
-          onClick={handleClick}
-        />
+        {products.map((product) => (
+          <ProductCard product={product} onClick={handleClick} />
+        ))}
+        {/* <ProductCard product={products[0]} onClick={handleClick} />
         <ProductCard product={products[1]} onClick={handleClick} />
-        <ProductCard
-          background="peru"
-          product={products[2]}
-          onClick={handleClick}
-        />
+        <ProductCard product={products[2]} onClick={handleClick} /> */}
       </ProductList>
     </div>
   );
