@@ -1,4 +1,4 @@
-export function ProductCard({ product, background = "slategray" }) {
+export function ProductCard({ product, background = "slategray", onClick }) {
   return (
     <article
       style={{
@@ -30,6 +30,7 @@ export function ProductCard({ product, background = "slategray" }) {
       </ul>
 
       <button
+        onClick={() => onClick(product)}
         style={{ marginTop: "10px", padding: "6px 12px", fontSize: "12px" }}
       >
         Buy (From ${product.price})
